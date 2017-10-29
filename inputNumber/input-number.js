@@ -8,7 +8,9 @@ Vue.component('input-number',{
         <input\
             type="text"\
             :value="currentValue"\
-            @change="handleChange">\
+            @change="handleChange"\
+            @keyup.up="handleUp"\
+            @keyup.down="handleDown">\
         <button \
         @click="handleDown"\
         :disabled = "currentValue <= min">-</button>\
